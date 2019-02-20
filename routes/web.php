@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'PagesController@index');
+
+Route::get('/urls', 'UrlsController@index');
+
+Route::get('/u/{id}', 'UrlsController@show');

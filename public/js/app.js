@@ -48943,6 +48943,11 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+var clipboard = new ClipboardJS('.btn');
+clipboard.on('success', function (e) {
+  console.log("Copied");
+  e.clearSelection();
+});
 
 /***/ }),
 

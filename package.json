@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.6"
     },
     "dependencies": {
+        "clipboard": "^2.0.4",
         "font-awesome": "^4.7.0"
     }
 }
