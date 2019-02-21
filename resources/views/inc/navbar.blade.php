@@ -25,6 +25,10 @@
                     <a class="nav-link text-light" href="/urls">My URLs</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/create">Create</a>
+                </li>
+
             </ul>
 
         </div>

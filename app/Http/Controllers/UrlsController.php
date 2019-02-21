@@ -15,7 +15,7 @@ class UrlsController extends Controller
     public function index()
     {
 
-        $urls = Url::all();
+        $urls = Url::orderBy('id', 'DESC')->get();
 
         $data = [
             'title' =>  "My URLs",
@@ -43,7 +43,16 @@ class UrlsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'url' => 'required'
+        ]);
+
+        $url = new Url;
+        $url -> destination = $request->input('url');
+        $url -> source = substr(sha1(date('Y-m-d H:i:s:ms')), 0, 6);
+        $url -> save();
+
+        return redirect('/urls')->with('success', 'URL Created');
     }
 
     /**

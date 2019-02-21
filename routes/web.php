@@ -16,3 +16,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/urls', 'UrlsController@index');
 
 Route::get('/u/{id}', 'UrlsController@show');
+
+Route::get('/create', 'PagesController@create');
+
+Route::post('/newurl', array('uses' => 'UrlsController@store'));
